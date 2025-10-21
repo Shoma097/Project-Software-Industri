@@ -1,12 +1,12 @@
 // Function slide gambar di hero
 const heroSection = document.querySelector('.hero');
 const images = [
-    'assets/kecaksunset.jpeg',
-    'assets/sawahubud.jpeg',
-    'assets/klingkingbeach.jpeg',
-    'assets/tamanujung2.jpeg',
-    'assets/danaubatur2.jpeg',
-    'assets/pantailovina.jpeg'
+    'assets/KEKE-11.jpg',
+    'assets/KEKE-2.jpg',
+    'assets/KEKE-3.jpg',
+    'assets/KEKE-10.jpg',
+    'assets/KEKE-5.jpg',
+    'assets/KEKE-14.jpg'
   ];
 
 let current = 0;
