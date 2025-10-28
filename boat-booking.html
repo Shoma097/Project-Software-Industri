@@ -4,48 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boat Trip Booking - Rocky Fast Boat</title>
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/homepage.css"> <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="booking-container">
-        <div class="booking-box">
-            <h2>Nusa Lembongan Trip Booking</h2>
-            <form id="boatBookingForm" class="booking-form">
-                <div class="form-group">
-                    <label>Trip Type</label>
-                    <select id="tripType" name="tripType" required>
-                        <option value="">Select Trip Type</option>
-                        <option value="oneWay">One Way</option>
-                        <option value="roundTrip">Round Trip</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Departure Date</label>
-                    <input type="date" id="departureDate" name="departureDate" required>
-                </div>
-                <div id="returnDateGroup" class="form-group" style="display: none;">
-                    <label>Return Date</label>
-                    <input type="date" id="returnDate" name="returnDate">
-                </div>
-                <div class="form-group">
-                    <label>Adult Tickets (12+ years)</label>
-                    <input type="number" id="adultTickets" name="adultTickets" min="1" required>
-                </div>
-                <div class="form-group">
-                    <label>Child Tickets (3-11 years)</label>
-                    <input type="number" id="childTickets" name="childTickets" min="0" value="0">
-                </div>
-                <div class="form-group">
-                    <label>Special Notes</label>
-                    <textarea id="notes" name="notes" rows="3"></textarea>
-                </div>
-                <button type="submit" class="booking-button">Book Trip</button>
-            </form>
+
+<div class="intro-section rocky-theme">
+    <div class="intro-grid">
+        <div class="intro-image">
+            <img src="assets/RockyFastCruise.jpg" alt="Rocky Fast Cruise Boat">
+        </div>
+        <div class="intro-text">
+            <h2>Welcome Aboard Rocky Fast Cruise!</h2>
+            <p>Your trusted partner for fast and comfortable boat transfers between Sanur and Nusa Lembongan since [Tahun Berdiri, misal: 2005]. We prioritize safety, reliability, and excellent customer service to ensure your island getaway starts smoothly.</p>
+            <p>With experienced captains and well-maintained boats, Rocky Fast Cruise offers multiple daily departures, making your travel plans flexible and convenient. Choose us for a seamless journey to the beautiful island of Nusa Lembongan.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Experienced & Certified Crew</li>
+                <li><i class="fas fa-ship"></i> Modern & Safe Vessels</li>
+                <li><i class="fas fa-clock"></i> On-Time Departures</li>
+                <li><i class="fas fa-headset"></i> Friendly Customer Support</li>
+            </ul>
         </div>
     </div>
 
-    <script src="js/nav-toggle.js"></script>
-    <script src="js/boat-booking.js"></script>
+    <div class="price-list">
+        <h3>Our Fares</h3>
+        <div class="price-grid">
+            <div class="price-item">
+                <h4>Adult (12+ years)</h4>
+                <p><strong>One Way:</strong> Rp 275,000</p>
+                <p><strong>Round Trip:</strong> Rp 400,000</p>
+            </div>
+            <div class="price-item">
+                <h4>Child (3-11 years)</h4>
+                <p><strong>One Way:</strong> Rp 175,000</p>
+                <p><strong>Round Trip:</strong> Rp 275,000</p>
+            </div>
+        </div>
+         <p class="price-note">For more information, Contact +62-813-3909-9963</p>
+    </div>
+</div>
+<div class="booking-container">
+    <div class="booking-box">
+        <h2>Book Your Nusa Lembongan Trip Now</h2> <form id="boatBookingForm" class="booking-form">
+            <div class="form-group">
+                 <label>Trip Type</label>
+                 <select id="tripType" name="tripType" required>
+                     <option value="">Select Trip Type</option>
+                     <option value="oneWay">One Way</option>
+                     <option value="roundTrip">Round Trip</option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Departure Date</label>
+                 <input type="date" id="departureDate" name="departureDate" required>
+             </div>
+             <div id="returnDateGroup" class="form-group" style="display: none;">
+                 <label>Return Date</label>
+                 <input type="date" id="returnDate" name="returnDate">
+             </div>
+             <div class="form-group">
+                 <label>Adult Tickets (12+ years)</label>
+                 <input type="number" id="adultTickets" name="adultTickets" min="1" value="1" required> </div>
+             <div class="form-group">
+                 <label>Child Tickets (3-11 years)</label>
+                 <input type="number" id="childTickets" name="childTickets" min="0" value="0">
+             </div>
+             <div class="form-group">
+                 <label>Special Notes (Optional)</label>
+                 <textarea id="notes" name="notes" rows="3" placeholder="e.g., request for specific seat, hotel pickup info"></textarea>
+             </div>
+             <button type="submit" class="booking-button">Request Booking</button> </form>
+    </div>
+</div>
+<script src="js/nav-toggle.js"></script>
+<script src="js/boat-booking.js"></script>
 </body>
 </html>
