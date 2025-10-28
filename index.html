@@ -17,11 +17,61 @@
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 24px;
+      align-items: center; /* vertically center the caption next to the map */
+      padding: 20px; /* balanced padding all around */
     }
     #homepage-map {
       height: 400px;
-      width: 100%;
+      flex: 1; /* let map take remaining space */
+      min-width: 0; /* prevent overflow in flex container */
       z-index: 1;
+    }
+
+    /* Center the location heading and subtitle above the map */
+    #location-map h2,
+    #location-map .subtitle {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px;
+    }
+
+    /* Map caption (aside) styling */
+    .map-caption {
+      width: 360px; /* larger caption as requested */
+      background: transparent; /* keep it visually linked to the map */
+      padding: 12px 14px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      color: #333;
+      align-self: center; /* ensure the caption centers within the flex container */
+    }
+
+    .map-caption h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .map-caption ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    /* Responsive: stack caption under the map on small screens */
+    @media (max-width: 900px) {
+      .map-wrapper {
+        flex-direction: column;
+        padding: 12px;
+      }
+
+      .map-caption {
+        width: 100%;
+        align-self: stretch;
+        padding: 12px;
+      }
     }
 
     /* Map Popup Styles */
@@ -195,7 +245,7 @@
             <img src="assets/KEKE-11.jpg" alt="Double Bed">
             <div class="room-info">
               <h3>Double Bed</h3>
-              <p class="room-desc">Comfortable double bed, ensuite bathroom, and sea view.</p>
+              <p class="room-desc">Rate: 350.000 / night</p>
               <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
@@ -204,7 +254,7 @@
             <img src="assets/KEKE-5.jpg" alt="Twin Bed">
             <div class="room-info">
               <h3>Twin Bed</h3>
-              <p class="room-desc">Two single beds, perfect for friends or family sharing.</p>
+              <p class="room-desc">Rate: 400.000 / night</p>
               <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
@@ -223,12 +273,12 @@
                 <h3>Nearby (approx.)</h3>
                 <p>Distances from Keke Homestay:</p>
                 <ul>
-                  <li>Sanur Beach — xxx meters</li>
-                  <li>Sanur Harbour — xxx meters</li>
-                  <li>Museum Le Mayeur — xxx meters</li>
-                  <li>ICON Mall — xxx meters</li>
-                  <li>Sindhu Market — xxx meters</li>
-                  <li>Pura Blanjong — xxx meters</li>
+                  <li>Sanur Beach — 1 km</li>
+                  <li>Sanur Harbour — 3 km</li>
+                  <li>Museum Le Mayeur — 2.8 km</li>
+                  <li>ICON Mall — 500 m</li>
+                  <li>Sindhu Market — 900 m</li>
+                  <li>Pura Blanjong — 2.5 km</li>
                 </ul>
               </aside>
             </div>
@@ -325,7 +375,7 @@
           </div>
           <div class="service-item reverse">
             <div class="service-image">
-              <img src="assets/nusa-lembongan.jpeg" alt="Fast boat to Nusa Lembongan">
+              <img src="assets/RockyFastCruise-2.jpg" alt="Fast boat to Nusa Lembongan">
             </div>
             <div class="service-info">
               <h2>Trip to Nusa Lembongan</h2>
