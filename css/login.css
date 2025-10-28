@@ -1,0 +1,106 @@
+/* Login and Signup Styles */
+html, body {
+    height: 100%; /* Ensure html and body can contain full height */
+    margin: 0;
+    padding: 0;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* <-- CHANGE THIS LINE */
+    padding: 20px;
+    background-color: #f5f5f5; /* Fallback color */
+    background-image: url('../assets/pantai-sanur.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #1e90ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.auth-button:hover {
+    background-color: #1873cc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.2);
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.auth-switch a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.auth-switch a:hover {
+    color: #1873cc;
+    text-decoration: underline;
+}

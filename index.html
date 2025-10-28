@@ -7,6 +7,52 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* --- Style Peta Dasar --- */
+    .leaflet-marker-icon {
+      filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+    }
+    .map-wrapper {
+      background: #f5f5f5;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    #homepage-map {
+      height: 400px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    /* --- STYLE POPUP PUTIH (YANG ANDA MINTA) --- */
+    /* Ini menargetkan kelas kustom yang akan kita tambahkan di JS */
+    .custom-leaflet-popup .leaflet-popup-content-wrapper {
+      background-color: #ffffff; /* Latar belakang putih */
+      color: #333; /* Warna teks gelap */
+      border-radius: 8px; /* Tepi membulat */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Bayangan halus */
+    }
+    
+    /* Mengatur padding di dalam popup */
+    .custom-leaflet-popup .leaflet-popup-content {
+      margin: 12px 18px; 
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    /* Membuat panah di bawah popup juga berwarna putih */
+    .custom-leaflet-popup .leaflet-popup-tip {
+      background-color: #ffffff;
+    }
+    
+    /* Menata teks tebal (nama lokasi) */
+    .custom-leaflet-popup strong {
+      font-weight: 700;
+      font-size: 15px;
+      color: #000;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
     
@@ -23,7 +69,7 @@
           <a href="#highlights">Highlights</a>
           <a href="#events-highlight">Bali Festivals & Traditions</a>
           <a href="#traveltips">Travel Tips</a>
-          <a href="tiketwisata.html">Tickets</a>
+          <a href="login.html">Login</a>
           <a href="#footer">Contact</a>
         </nav>
       </header>
@@ -88,7 +134,7 @@
             <div class="room-info">
               <h3>Double Bed</h3>
               <p class="room-desc">Comfortable double bed, ensuite bathroom, and sea view.</p>
-              <a class="btn btn-primary" href="booking.html?room=double">Book Now</a>
+              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
 
@@ -97,7 +143,7 @@
             <div class="room-info">
               <h3>Twin Bed</h3>
               <p class="room-desc">Two single beds, perfect for friends or family sharing.</p>
-              <a class="btn btn-primary" href="booking.html?room=twin">Book Now</a>
+              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
 
@@ -179,10 +225,11 @@
               <img src="assets/airport-pickup.jpeg" alt="Airport pickup service in Bali">
             </div>
             <div class="service-info">
-              <h2>Book Your Airport Transfer</h2>
+              <h2>Book Your Airport Transport</h2>
               <p>Book your pickup or dropoff at the airport now for a hassle-free journey.</p>
-              <a href="booking.html?service=airport" class="btn btn-primary">Book Now</a>
+              <a href="login.html" class="btn btn-primary book-now-btn" data-booking-type="transport">Book Now</a>
             </div>
+            
           </div>
           <div class="service-item reverse">
             <div class="service-image">
@@ -191,7 +238,7 @@
             <div class="service-info">
               <h2>Trip to Nusa Lembongan</h2>
               <p>Book your fast boat ticket to the beautiful island of Nusa Lembongan.</p>
-              <a href="booking.html?service=lembongan" class="btn btn-primary">Book Now</a>
+              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="boat">Book Now</a>
             </div>
           </div>
         </section>
@@ -301,8 +348,9 @@
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="js/home-map.js"></script>
-
 <script src="js/homepage.js"></script>
 <script src="js/nav-toggle.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking-handler.js"></script>
 </body>
 </html>
