@@ -16,7 +16,7 @@
         </div>
         <div class="intro-text">
             <h2>Welcome Aboard Rocky Fast Cruise!</h2>
-            <p>Your trusted partner for fast and comfortable boat transfers between Sanur and Nusa Lembongan since [Tahun Berdiri, misal: 2005]. We prioritize safety, reliability, and excellent customer service to ensure your island getaway starts smoothly.</p>
+            <p>Your trusted partner for fast and comfortable boat transfers between Sanur and Nusa Lembongan since 2010. We prioritize safety, reliability, and excellent customer service to ensure your island getaway starts smoothly.</p>
             <p>With experienced captains and well-maintained boats, Rocky Fast Cruise offers multiple daily departures, making your travel plans flexible and convenient. Choose us for a seamless journey to the beautiful island of Nusa Lembongan.</p>
             <ul>
                 <li><i class="fas fa-check-circle"></i> Experienced & Certified Crew</li>
@@ -55,17 +55,49 @@
                      <option value="roundTrip">Round Trip</option>
                  </select>
              </div>
+
+             <div class="form-group">
+                 <label>Full Name</label>
+                 <input type="text" id="fullName" name="fullName" required>
+             </div>
+             <div class="form-group">
+                 <label>Telephone Number</label>
+                 <input type="tel" id="phone" name="phone" required>
+             </div>
+             <div class="form-group">
+                 <label>Email</label>
+                 <input type="email" id="email" name="email" required>
+             </div>
              <div class="form-group">
                  <label>Departure Date</label>
                  <input type="date" id="departureDate" name="departureDate" required>
+             </div>
+             <div class="form-group">
+                 <label>Departure Time</label>
+                 <select id="departureTime" name="departureTime" required>
+                     <option value="08:00">Morning — 8:00 AM</option>
+                     <option value="11:00">Late Morning — 11:00 AM</option>
+                     <option value="14:00">Afternoon — 2:00 PM</option>
+                     <option value="16:00">Evening — 4:00 PM</option>
+                 </select>
              </div>
              <div id="returnDateGroup" class="form-group" style="display: none;">
                  <label>Return Date</label>
                  <input type="date" id="returnDate" name="returnDate">
              </div>
+             <div id="returnTimeGroup" class="form-group" style="display: none;">
+                 <label>Return Time</label>
+                 <select id="returnTime" name="returnTime">
+                     <option value="08:00">Morning — 8:00 AM</option>
+                     <option value="11:00">Late Morning — 11:00 AM</option>
+                     <option value="14:00">Afternoon — 2:00 PM</option>
+                     <option value="16:00">Evening — 4:00 PM</option>
+                 </select>
+             </div>
              <div class="form-group">
                  <label>Adult Tickets (12+ years)</label>
-                 <input type="number" id="adultTickets" name="adultTickets" min="1" value="1" required> </div>
+                 <input type="number" id="adultTickets" name="adultTickets" min="0" value="0" required>
+             </div>
              <div class="form-group">
                  <label>Child Tickets (3-11 years)</label>
                  <input type="number" id="childTickets" name="childTickets" min="0" value="0">
