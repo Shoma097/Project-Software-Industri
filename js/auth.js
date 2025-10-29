@@ -2,24 +2,12 @@
 const AUTH = {
     init() {
         this.setupEventListeners();
-        this.checkAuthStatus();
     },
 
     setupEventListeners() {
         const loginForm = document.getElementById('loginForm');
-        const signupForm = document.getElementById('signupForm');
-        const logoutBtn = document.getElementById('logout');
-
         if (loginForm) {
-            loginForm.addEventListener('submit', (e) => this.handleLogin(e));
-        }
-
-        if (signupForm) {
-            signupForm.addEventListener('submit', (e) => this.handleSignup(e));
-        }
-
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', (e) => this.handleLogout(e));
+            loginForm.addEventListener('submit', (e) => this.handleAdminLogin(e));
         }
     },
 
@@ -39,25 +27,19 @@ const AUTH = {
         }
     },
 
-    handleLogin(e) {
+    handleAdminLogin(e) {
         e.preventDefault();
-        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // Basic validation
-        if (!this.validateEmail(email) || !password) {
-            this.showError('Please enter valid email and password');
-            return;
+        // In a real application, you would validate these credentials against a backend
+        // For demo purposes, we're using hardcoded credentials
+        if (username === 'admin' && password === 'admin123') {
+            localStorage.setItem('isAdmin', 'true');
+            window.location.href = 'admin/admin.html';
+        } else {
+            this.showError('Invalid credentials');
         }
-
-        // Simulate login (replace with actual backend call)
-        localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('userEmail', email);
-
-        // Redirect to appropriate page
-        const redirectUrl = localStorage.getItem('bookingRedirect') || 'index.html';
-        localStorage.removeItem('bookingRedirect');
-        window.location.href = redirectUrl;
     },
 
     handleSignup(e) {

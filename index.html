@@ -181,7 +181,6 @@
           <nav>
           <a href="index.html">Home</a>
           <a href="#destinations" class="nav-link">Destinations</a>
-          <a href="login.html">Login</a>
           <a href="#footer">Contact</a>
         </nav>
       </header>
@@ -245,8 +244,9 @@
             <img src="assets/KEKE-11.jpg" alt="Double Bed">
             <div class="room-info">
               <h3>Double Bed</h3>
-              <p class="room-desc">Rate: 350.000 / night</p>
-              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
+              <p class="room-desc">Rate: <span class="room-price">350.000</span> / night</p>
+              <p class="room-desc">Rooms Available: <span class="rooms-available">5</span></p>
+              <a href="./hotel-booking.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
 
@@ -254,8 +254,9 @@
             <img src="assets/KEKE-5.jpg" alt="Twin Bed">
             <div class="room-info">
               <h3>Twin Bed</h3>
-              <p class="room-desc">Rate: 400.000 / night</p>
-              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
+              <p class="room-desc">Rate: <span class="room-price">400.000</span> / night</p>
+              <p class="room-desc">Rooms Available: <span class="rooms-available">3</span></p>
+              <a href="./hotel-booking.html" class="btn btn-primary book-now-btn" data-booking-type="hotel">Book Now</a>
             </div>
           </div>
 
@@ -369,7 +370,7 @@
             <div class="service-info">
               <h2>Book Your Airport Transport</h2>
               <p>Book your pickup or dropoff at the airport now for a hassle-free journey.</p>
-              <a href="login.html" class="btn btn-primary book-now-btn" data-booking-type="transport">Book Now</a>
+              <a href="./transport-booking.html" class="btn btn-primary book-now-btn" data-booking-type="transport">Book Now</a>
             </div>
             
           </div>
@@ -380,7 +381,7 @@
             <div class="service-info">
               <h2>Trip to Nusa Lembongan</h2>
               <p>Book your fast boat ticket to the beautiful island of Nusa Lembongan.</p>
-              <a href="./login.html" class="btn btn-primary book-now-btn" data-booking-type="boat">Book Now</a>
+              <a href="./boat-booking.html" class="btn btn-primary book-now-btn" data-booking-type="boat">Book Now</a>
             </div>
           </div>
         </section>
@@ -450,5 +451,6 @@
 <script src="js/nav-toggle.js"></script>
 <script src="js/auth.js"></script>
 <script src="js/booking-handler.js"></script>
+<script src="js/room-availability.js"></script>
 </body>
 </html>
